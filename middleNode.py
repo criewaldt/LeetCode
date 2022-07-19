@@ -1,5 +1,10 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
-    def isSubsequence(self, s, t):
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
         counter = 0
         target = head
         while target != None:
@@ -14,13 +19,3 @@ class Solution:
         for item in range(0, half):
             export = export.next
         return export
-
-
-
-
-
-
-
-
-answer = Solution()
-print('answer:', answer.isSubsequence(s="abc", t="ahbgdc"))
