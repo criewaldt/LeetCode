@@ -5,4 +5,4 @@ class ListNode:
 
 class Solution():
     def reverseList(self, head):
-        pass
+        reversed = ListNode()

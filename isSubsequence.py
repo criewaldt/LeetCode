@@ -1,19 +1,15 @@
 class Solution:
     def isSubsequence(self, s, t):
+        if len(s) > len(t):
+            return False
+        if len(s) == 0:
+            return True
         counter = 0
-        target = head
-        while target != None:
-            counter += 1
-            target = target.next
-        if counter % 2 == 0:
-            half = counter / 2
-            half = int(half)
-        else:
-            half = int(counter / 2)
-        export = head
-        for item in range(0, half):
-            export = export.next
-        return export
+        for item in range(len(t)):
+            if counter <= (len(s)-1):
+                if s[counter] == t[item]:
+                    counter += 1
+        return counter == len(s)
 
 
 
